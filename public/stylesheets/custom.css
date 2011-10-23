@@ -3,7 +3,8 @@
 }
 
 body {
-  background: #cff;
+  background: #2891B8;
+  color: #340A66;
 }
 
 header {
@@ -13,6 +14,7 @@ header {
 header img {
   padding: 1em;
   background: #fff;
+  background: #D2AFE3;
 }
 
 section {
@@ -26,20 +28,38 @@ section h1 {
   font-size: 200%;
 }
 
+table.profile {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+td.sidebar {
+	width: 30%;
+	padding: 1em;
+	vertical-align: top;
+	background: #ffc;
+}
+
+.profile img.gravatar {
+	border: 1px soild #999;
+	margin-bottom: -15px;
+}
+
+
 /* Links */
 
 a {
-  color: #09c;
+  color: #2891B8;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #FF0051;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #2C649D;
 }
 
 
@@ -51,6 +71,7 @@ nav {
 
 nav {
   background-color: white;
+  background: #D2AFE3;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -72,10 +93,11 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #2C649D;
 }
 
 nav ul li a:hover {
+  color: #FF0051;
   text-decoration: underline;
 }
 
@@ -89,7 +111,7 @@ a.signup_button {
   text-align: center;
   width: 190px;
   color: #fff;
-  background: #006400;
+  background: #303781;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;

@@ -1,0 +1,36 @@
+Script started on Fri Sep 30 08:53:58 2011
+[?1034hbash-3.2$ pri[K[Kuts 'hello'
+bash: puts: command not found
+bash-3.2$ 
+bash-3.2$ rails c
+^C/Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require': Interrupt
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `block in require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/core_ext.rb:2:in `block in <top (required)>'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/core_ext.rb:1:in `each'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/core_ext.rb:1:in `<top (required)>'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `block in require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/all.rb:3:in `<top (required)>'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `block in require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/application/bootstrap.rb:16:in `block in <module:Bootstrap>'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/initializable.rb:25:in `instance_exec'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/initializable.rb:25:in `run'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/initializable.rb:49:in `each'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/initializable.rb:49:in `run_initializers'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/application.rb:134:in `initialize!'
+	from /Users/rs/.rvm/gems/ruby-1.9.2-p0@rails3tutorial/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+	from /
