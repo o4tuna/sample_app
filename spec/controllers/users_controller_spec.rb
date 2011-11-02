@@ -56,7 +56,9 @@ describe UsersController do
       describe "failure" do
 
         before(:each) do
-          @attr = { :name => "", :email => "", :password => "",
+          @attr = { :name => "", 
+                    :email => "", 
+                    :password => "",
                     :password_confirmation => "" }
         end
 
@@ -79,12 +81,14 @@ describe UsersController do
       
       describe "success" do
         before(:each) do
-          @attr = { :name => "New User", :email => "user@example.com", :password => "foobar",
+          @attr = { :name => "New User", 
+                    :email => "user@example.com", 
+                    :password => "foobar",
                     :password_confirmation => "foobar" }
         end
         
         it "should create a user" do
-          lamda do
+          lambda do
             post :create, :user => @attr
           end.should change(User, :count).by(1)
         end
@@ -97,6 +101,11 @@ describe UsersController do
         it "should have a welcome message" do
           post :create, :user => @attr
           flash[:success].should =~ /welcome/i
+        end
+        
+        it "should sign the user in" do
+          post :create, :user => @attr
+          controller.should be_signed_in
         end
                 
       end
