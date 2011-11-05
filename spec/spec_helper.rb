@@ -28,5 +28,13 @@ RSpec.configure do |config|
   def test_sign_in(user)
     controller.sign_in(user)
   end
+
+  # The following code creates headings in log output
+  # Source: http://benmabey.com/2008/07/04/global-setup-in-rspec-or-how-to-add-logging-for-specs.html
+  config.before(:each) do
+    full_example_description = "#{self.class.description} #{@method_name}"
+    Rails::logger.info("\n\n#{full_example_description}\n#{'-' * (full_example_description.length)}")
+  end
+
   
 end
