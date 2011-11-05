@@ -16,17 +16,26 @@ class UsersController < ApplicationController
   end
 
   def new
+    if signed_in?
+      redirect_to(root_path)
+      return
+    end
     @user = User.new
     @title = "Sign up"
   end
 
   def create
+    if signed_in?
+      redirect_to(root_path)
+      return
+    end
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
       redirect_to @user, :flash => { :success => "Welcome!" }
     else
       @title = "Sign up"
+      @user.password.replace ""
       render 'new'
     end
   end
@@ -45,11 +54,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User deleted."
-    redirect_to users_path
-#    @user.destroy
-#    redirect_to users_path, :flash => { :success => "User deleted." }
+#    User.find(params[:id]).destroy
+#    flash[:success] = "User deleted."
+#    redirect_to users_path
+    @user.destroy
+    redirect_to users_path, :flash => { :success => "User deleted." }
   end
 
   private
@@ -65,11 +74,6 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-
-  #  following line is from p. 408
-  #  redirect_to(root_path) unless current_user.admin?
-
-  # next 2 lines are from online reference code, probably the solution to Exercise 5 on p. 409
     @user = User.find(params[:id])
     redirect_to(root_path) if !current_user.admin? || current_user?(@user)  
 

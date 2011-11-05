@@ -51,6 +51,20 @@ describe UsersController do
         response.should have_selector("a", :href => "/users?page=2", :content => "2")
         response.should have_selector("a", :href => "/users?page=2", :content => "Next")
       end
+      
+      it "should reveal delete links for users with admin status" do
+        @user.admin = true
+        test_sign_in(@user)
+        get :index
+        response.should have_selector("a", :content => "delete")
+      end
+
+      it "should hide delete links from users without admin status" do
+        @user.admin = false
+        test_sign_in(@user)
+        get :index
+        response.should_not have_selector("a", :content => "delete")
+      end
     end    
   end
 
@@ -98,6 +112,33 @@ describe UsersController do
       get :new
       response.should have_selector("title", :content => "Sign up")
     end
+    
+    it "should have a name field" do
+      get :new
+      response.should have_selector("input[name='user[name]'][type='text']")      
+    end
+    
+    it "should have a email field" do
+      get :new
+      response.should have_selector("input[name='user[email]'][type='text']")      
+    end
+    
+    it "should have a password field" do
+      get :new
+      response.should have_selector("input[name='user[password]'][type='password']")      
+    end
+    
+    it "should have a password confirmation field" do
+      get :new
+      response.should have_selector("input[name='user[password_confirmation]'][type='password']")      
+    end
+    
+    it "should not be accessable to a signed-in user" do
+      user = Factory(:user)
+      test_sign_in(user)
+      get :new
+      response.should redirect_to(root_path)
+    end    
   end
 
 
@@ -128,8 +169,14 @@ describe UsersController do
   
   describe "POST 'create'" do
     
-    describe "failure" do
+    it "should not be accessable to a signed-in user" do
+      user = Factory(:user)
+      test_sign_in(user)
+      post :create
+      response.should redirect_to(root_path)
+    end    
 
+    describe "failure" do
         before(:each) do
           @attr = { :name => "", 
                     :email => "", 
